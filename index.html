@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/themes/trontastic/jquery-ui.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+<form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="fname">Second name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="email' name="email" value= '@' ><br><br>
+    <input type="submit" value="Submit">
+</form>
+<script>
+    const validator = {
+        required: true,
+        minlength: 2
+    },
+
+    $('form').validate({
+rules: {
+    fname: {
+        required: true,
+        minlength: 3
+    },
+    lname: {
+        required: true,
+        maxlength: 3
+    },
+    email:{
+        required: true,
+        email: true
+    }
+}
+    });
+</script>
+
+</body>
+</html>
